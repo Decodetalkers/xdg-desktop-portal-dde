@@ -10,4 +10,11 @@ class BackgroundPortal : public QDBusAbstractAdaptor
 public:
     explicit BackgroundPortal(QObject *parent);
     ~BackgroundPortal() = default;
+public slots:
+    bool
+    EnableAutostart(const QString &app_id, const bool &enable, const QStringList commandline, const uint &flags);
+    QVariantMap GetAppState();
+    uint NotifyBackground(const QDBusObjectPath &handle, const QString &app_id, QString name, QVariantMap &results);
+signals:
+    void RunnintApplicationsChanged();
 };

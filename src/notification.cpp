@@ -7,6 +7,7 @@ Q_LOGGING_CATEGORY(XdgDesktopDDENotification, "xdg-dde-notification")
 NotificationProtal::NotificationProtal(QObject *parent)
     : QDBusAbstractAdaptor(parent)
 {
+    qCDebug(XdgDesktopDDENotification) << "init NotificationProtal";
 }
 
 void NotificationProtal::AddNotification(const QString &app_id, const QString &id, const QVariantMap &notification)

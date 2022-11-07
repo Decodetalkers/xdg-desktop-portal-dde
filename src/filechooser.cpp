@@ -6,6 +6,7 @@ Q_LOGGING_CATEGORY(XdgDesktopDDEFileChooser, "xdg-dde-filechooser")
 FileChooserProtal::FileChooserProtal(QObject *parent)
     : QDBusAbstractAdaptor(parent)
 {
+    qCDebug(XdgDesktopDDEFileChooser) << "init dde-filechooser";
 }
 
 uint FileChooserProtal::OpenFile(const QDBusObjectPath &handle,

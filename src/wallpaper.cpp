@@ -9,6 +9,7 @@ Q_LOGGING_CATEGORY(XdgDesktopDDEWallpaper, "xdg-dde-wallpaper")
 WallPaperPortal::WallPaperPortal(QObject *parent)
     : QDBusAbstractAdaptor(parent)
 {
+    qCDebug(XdgDesktopDDEWallpaper) << "WallPaper init";
 }
 uint WallPaperPortal::SetWallpaperURI(const QDBusObjectPath &handle,
                                       const QString &app_id,
